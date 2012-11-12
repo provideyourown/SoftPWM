@@ -28,17 +28,24 @@ neatly encapsulated in a single class.
 **Construction & Configuration**
 
   SoftPWM(byte pinNo);
+  
 
   void setPWM(byte percent); // fraction * 100, e.g. for 97%, enter 97
 
   void invertPWM(); // if the duty cycle should be reversed, e.g. 95% becomes 5%
 
-  // turn pwm on & off
+
+  **Turn pwm on & off**
+  
   void enable();
+  
   void disable();
 
-  // static methods to set the base frequency/period. Default = 1,000 microseconds
+
+  **Static methods to set the base frequency/period. Default = 1,000 microseconds**
+  
   static void SetFrequency(unsigned long freq = 1000);
+  
   static void SetPeriod(unsigned long period = 1000); // microsecs
 
 **Pulse the LED**
